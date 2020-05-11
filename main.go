@@ -27,6 +27,11 @@ func main() {
 	c := 0
 
 	for _, f := range folder {
+
+		if f.IsDir() {
+			continue
+		}
+
 		name := f.Name()
 		fPath := path.Join(cPath, name)
 
